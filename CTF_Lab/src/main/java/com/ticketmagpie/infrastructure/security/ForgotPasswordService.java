@@ -16,10 +16,9 @@ public class ForgotPasswordService {
   public void userForgotPassword(User user) {
     mailService.sendEmail(
         user.getEmail(),
-        "Your Ticketmagpie password",
+        "Your Ticketmagpie password is...",
         format(
-            "Hello %s! Have you lost your password? Here it is: %s.",
-            user.getUsername(),
-            user.getPassword()));
+            "Hello %s! Have you lost your password? Screw you! :P",
+            user.getUsername()));
   }
 }
