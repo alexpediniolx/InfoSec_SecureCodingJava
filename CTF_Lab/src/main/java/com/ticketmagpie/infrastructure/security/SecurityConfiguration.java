@@ -21,6 +21,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
+    http.sessionManagement().sessionFixation().changeSessionId();
     http
         //Necessary for HTML forms to work
         .csrf().disable()
